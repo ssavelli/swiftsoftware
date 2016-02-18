@@ -31,3 +31,10 @@ node_modules
 
 # Optional REPL history
 .node_repl_history
+
+InvisibleAutoDesigns/*.woff2
+InvisibleAutoDesigns/*.eot
+InvisibleAutoDesigns/*.svg
+InvisibleAutoDesigns/*.woff
+InvisibleAutoDesigns/*.ttf
+bundle.js
