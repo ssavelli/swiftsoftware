@@ -1,3 +1,40 @@
 ﻿body {
   background: white;
 }
+
+.video-background {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    padding: 0px;
+    margin: 0px;
+    z-index: -1000;
+    overflow: hidden;
+}
+
+.video-container {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    width: auto;
+    height: 100vh;
+    z-index: 0;
+    border: solid 5px yellow;
+    /*background-size: cover;
+    background-position: 50% 50%;
+    height: 100vh;
+    z-index: 0;*/ 
+}
+
+.video-overlay {
+    position: absolute;
+    text-align: center;
+    bottom: 40%;
+    width: 100%;
+    color: white; 
+}
