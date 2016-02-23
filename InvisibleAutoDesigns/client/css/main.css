@@ -1,4 +1,5 @@
-﻿body {
+﻿
+body {
   background: white;
 }
 
@@ -25,10 +26,6 @@
     height: 100vh;
     z-index: 0;
     border: solid 5px yellow;
-    /*background-size: cover;
-    background-position: 50% 50%;
-    height: 100vh;
-    z-index: 0;*/ 
 }
 
 .video-overlay {
@@ -37,4 +34,53 @@
     bottom: 40%;
     width: 100%;
     color: white; 
+}
+
+/* fix iOS bug not displaying 100vh correctly */
+/* ipad */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+	.video-container {
+		height: 672px;
+	}
+}
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+	.video-background {
+        position: absolute;
+        right: -10px;
+        bottom: -10px;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        padding: 0px;
+        margin: 0px;
+        z-index: -1000;
+        overflow: hidden;
+    }
+	.video-container {
+		height: 940px;
+		width: 778px;
+	}
+}
+/* iphone5 */
+@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2) {
+	.video-container {
+		height: 320px;
+	}
+}
+@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2) {
+	.video-container {
+		height: 568px;
+	}
+}
+/* iPhone 4 */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) {
+	.video-container {
+		height: 320px;
+	}
+}
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
+	.video-container {
+		height: 480px;
+	}
 }
