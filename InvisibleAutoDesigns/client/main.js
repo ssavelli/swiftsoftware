@@ -1,34 +1,42 @@
 ﻿'use strict';
-const ReactDOM = require('react-dom');
-const React = require('react');
-const Router = require('react-router').Router;
-const History = require('react-router').browserHistory;
-const Route = require('react-router').Route;
-const IndexRoute = require('react-router').IndexRoute;
+import ReactDOM from 'react-dom';
+import React from 'react';
+import { Router } from 'react-router';
+import { browserHistory } from 'react-router';
+import { Route } from 'react-router';
+import { IndexRoute } from 'react-router';
 
-//import { useRouterHistory } from 'react-router';
-//import { createHashHistory } from 'history';
-//const appHistory = useRouterHistory(createHashHistory)({ queryKey: false });
+import Index from './pages/Index.jsx';
+import Home from './pages/Home.jsx';
+import Products from './pages/Products.jsx';
+import FAQ from './pages/FAQ.jsx';
+import AboutUs from './pages/AboutUs.jsx';
 
-//require('./css/main.css');
-require('./js/bootstrap.min.js');
-require('./js/jasny-bootstrap.min.js');
- 
-const Index = require('./pages/Index.jsx');
-const Home = require('./pages/Home.jsx');
-const Products = require('./pages/Products.jsx');
-const FAQ = require('./pages/FAQ.jsx');
-const AboutUs = require('./pages/AboutUs.jsx');
-//history={History}
- 
+import PageChangedActionCreator from './data/actions/PageChangedActionCreator.js';
+
+var Routes = React.createClass({
+
+  onRouteEnter : function(nextState) {
+    if (nextState && nextState.routes && nextState.routes.length > 0) {
+      var currentRoute = nextState.routes[nextState.routes.length - 1];
+      PageChangedActionCreator(currentRoute.name);
+    }
+  },
+
+  render: function() {
+    return (
+      <Router history={browserHistory}>
+        <Route path="/" component={Index} >
+          <IndexRoute name="home" component={Home} onEnter={this.onRouteEnter} />
+          <Route name="products" path="/products" component={Products} onEnter={this.onRouteEnter} />
+          <Route name="faq" path="/faq" component={FAQ} onEnter={this.onRouteEnter} />
+          <Route name="aboutUs" path="/about-us" component={AboutUs} onEnter={this.onRouteEnter} />
+        </Route>
+      </Router>
+    );
+  }
+});
+
 ReactDOM.render(
-  <Router history={History}>
-    <Route path="/" component={Index}> 
-      <IndexRoute component={Home}/>
-      <Route path="/products" component={Products} /> 
-      <Route path="/faq" component={FAQ} /> 
-      <Route path="/about-us" component={AboutUs} /> 
-    </Route>
-  </Router>,
-  document.getElementById('root')
-); 
+  React.createElement(Routes),
+  document.getElementById('root'));

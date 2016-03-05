@@ -1,7 +1,6 @@
 ﻿'use strict';
-const React = require('react');
-
-const NavBar = require('../components/navbar/NavBar.jsx');
+import React from 'react';
+import NavBar from '../components/navbar/NavBar.jsx';
 
 var IndexPage = React.createClass({
   render: function() {
@@ -19,5 +18,4 @@ var IndexPage = React.createClass({
   }
 });
 
-module.exports = IndexPage;
-
+export default IndexPage;
