@@ -7,7 +7,7 @@
 
     <title>Invisible Auto Designs</title>
     <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="./bootstrap/css/jasny-bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="./bootstrap/css/jasny-bootstrap.min.css" rel="stylesheet"> -->
     <link href="./client/css/main.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -19,6 +19,28 @@
 </head>
 <body>
     <section id="root"></section>
+
+    <!--<nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Brand</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 3</a></li>
+            <li>&nbsp;&nbsp;&nbsp;</li>
+          </ul>
+        </div>
+      </div>
+    </nav>-->
 
    <!--<div class="navbar navbar-fixed-top navbar-default">
         <div class="container-fluid">
@@ -180,9 +202,10 @@
     </div>-->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <script src="./client/bundle.js"></script>
 
-    <!--<script>
+    <script>
         $('a[href*=#]:not([href=#])').click(function () {
             if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
                 || location.hostname == this.hostname) {
@@ -191,13 +214,13 @@
 
                 if (target.length) {
                     $('html,body').animate({
-                        scrollTop: target.offset().top - (this.hash != '#top' ? 70 : 0)
+                        scrollTop: target.offset().top - (this.hash != '#top' ? 50 : 0)
                     }, 1000);
                     return false;
                 }
             }
         });
-    </script>-->
+    </script>
 
 </body>
 </html>

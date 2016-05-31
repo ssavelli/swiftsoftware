@@ -1,7 +1,5 @@
 ﻿'use strict';
-const React = require('react');
-
-const NavBar = require('../components/navbar/NavBar.jsx');
+import React from 'react';
 
 var AboutUsPage = React.createClass({
   render: function() {
@@ -13,4 +11,4 @@ var AboutUsPage = React.createClass({
   }
 });
 
-module.exports = AboutUsPage;
+export default AboutUsPage;
