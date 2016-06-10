@@ -24,7 +24,7 @@ var Routes = React.createClass({
 
   render: function() {
     return (
-      <Router history={browserHistory}>
+      <Router onUpdate={() => window.scrollTo(0, 0)} history={browserHistory}>
         <Route path="/" component={Index} >
           <IndexRoute name="home" component={Home} onEnter={this.onRouteEnter} />
           <Route name="products" path="/products" component={Products} onEnter={this.onRouteEnter} />

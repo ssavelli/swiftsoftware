@@ -49,7 +49,7 @@
     "watch-client": "webpack --colors --watch",
     "watch-server": "nodemon server/app.js",
     "build": "webpack",
-    "npmstart": "npm-run-all --parallel watch-client watch-server",
-    "start": "webpack-dev-server --content-base ."
+    "start": "npm-run-all -p watch-server watch-client ",
+    "nstart": "webpack-dev-server --content-base ."
   }
 }

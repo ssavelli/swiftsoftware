@@ -9,15 +9,26 @@ var PageHeading = React.createClass({
            <h1>{this.props.mainHeading}</h1>
            <br/>
            <br/>
-           {this.props.subHeading}
-           <br/>
-           <br/>
+           {this._getSubHeading()}
            <a href="#content">
              <img src="./client/images/DownArrow.png" />
            </a>
          </div>
      </div>
     );
+  },
+  _getSubHeading: function() {
+    if (this.props.subHeading) {
+      return (
+        <span>
+          {this.props.subHeading}
+          <br/>
+          <br/>
+        </span>
+      );
+    }
+
+    return '';
   }
 });
 

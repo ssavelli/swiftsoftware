@@ -20,6 +20,7 @@
 <body>
     <section id="root"></section>
 
+
     <!--<nav class="navbar navbar-default">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -202,25 +203,31 @@
     </div>-->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-    <script src="./client/bundle.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
     <script>
-        $('a[href*=#]:not([href=#])').click(function () {
-            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
-                || location.hostname == this.hostname) {
-                var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+        function attachSmoothScroll() {
+          $('a[href*=#]:not([href=#])').click(function () {
+              if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+                  || location.hostname == this.hostname) {
+                  var target = $(this.hash);
+                  target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
 
-                if (target.length) {
-                    $('html,body').animate({
-                        scrollTop: target.offset().top - (this.hash != '#top' ? 50 : 0)
-                    }, 1000);
-                    return false;
-                }
-            }
-        });
+                  if (target.length) {
+                      $('html,body').animate({
+                          scrollTop: target.offset().top - (this.hash != '#top' ? 50 : 0)
+                      }, 1000);
+                      return false;
+                  }
+              }
+          });
+        }
+
+        function detachSmoothScroll() {
+          $('a[href*=#]:not([href=#])').off('click');
+        }
     </script>
 
+    <script src="./client/bundle.js"></script>
 </body>
 </html>

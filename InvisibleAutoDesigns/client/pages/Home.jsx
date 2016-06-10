@@ -5,16 +5,24 @@ import PageHeading from '../components/PageHeading.jsx';
 import Quote from '../components/Quote.jsx';
 
 var HomePage = React.createClass({
+  componentDidMount: function() {
+    attachSmoothScroll();
+  },
+  componentWillUnmount: function() {
+    detachSmoothScroll();
+  },
   render: function() {
-  	var backgroundStyle = {
-  	  background: 'url(./client/images/StaticBackground.jpg) no-repeat',
-      backgroundSize: 'cover'
-  	};
-
     return (
       <div>
-        <VideoBackground imageSource="http://advancedautomotivefilm.com/wp-content/uploads/2015/03/film-application-teaser.mp4">
-            <PageHeading mainHeading="Protect Your Investment" subHeading="Invisible Auto Designs is the premier distributor and installer of automotive Paint Protection Film." />
+        <VideoBackground
+          videoSource="http://advancedautomotivefilm.com/wp-content/uploads/2015/03/film-application-teaser.mp4"
+          fallbackImageSource="./client/images/StaticBackground.jpg"
+          loadingPoster="./client/images/BlackPixel.gif"
+          >
+            <PageHeading
+              mainHeading="Protect Your Investment"
+              subHeading="Invisible Auto Designs is the premier distributor and installer of automotive Paint Protection Film."
+              />
         </VideoBackground>
 
         <div id="content" className="container">
@@ -34,7 +42,6 @@ var HomePage = React.createClass({
           <Quote quoteText="Just wanted to say thanks for the awesome job you did … the car looks phenomenal" quoteSource="Jim" rightAlign="true"/>
           <div className="spacer"/>
         </div>
-
       </div>
     );
   }

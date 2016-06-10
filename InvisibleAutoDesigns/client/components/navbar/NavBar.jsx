@@ -15,7 +15,7 @@ var NavBar = React.createClass({
             </button>
             <a className="navbar-brand" href="#">Invisible Auto Designs</a>
           </div>
-          <div class="collapse navbar-collapse" id="navbar-collapse-content">
+          <div className="collapse navbar-collapse" id="navbar-collapse-content">
             <ul className="nav navbar-nav navbar-right">
               <NavBarItem name="home" url="/" text="Home"/>
               <NavBarItem name="products" url="/products" text="Products"/>
