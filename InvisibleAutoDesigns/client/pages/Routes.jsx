@@ -9,6 +9,7 @@ import Index from './Index.jsx';
 import Home from './Home.jsx';
 import Products from './Products.jsx';
 import FAQ from './FAQ.jsx';
+import Media from './Media.jsx';
 import AboutUs from './AboutUs.jsx';
 
 import PageChangedActionCreator from '../data/actions/PageChangedActionCreator.js';
@@ -29,6 +30,7 @@ var Routes = React.createClass({
           <IndexRoute name="home" component={Home} onEnter={this.onRouteEnter} />
           <Route name="products" path="/products" component={Products} onEnter={this.onRouteEnter} />
           <Route name="faq" path="/faq" component={FAQ} onEnter={this.onRouteEnter} />
+          <Route name="media" path="/media" component={Media} onEnter={this.onRouteEnter} />
           <Route name="aboutUs" path="/about-us" component={AboutUs} onEnter={this.onRouteEnter} />
         </Route>
       </Router>

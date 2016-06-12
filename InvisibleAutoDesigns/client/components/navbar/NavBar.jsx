@@ -19,8 +19,10 @@ var NavBar = React.createClass({
             <ul className="nav navbar-nav navbar-right">
               <NavBarItem name="home" url="/" text="Home"/>
               <NavBarItem name="products" url="/products" text="Products"/>
-              <NavBarItem name="faq" url="/faq" text="FAQ"/>
+              <NavBarItem name="faq" url="/faq" text="Maintenance &amp; FAQ"/>
+              <NavBarItem name="media" url="/media" text="Media"/>
               <NavBarItem name="aboutUs" url="/about-us" text="About Us"/>
+              <NavBarItem name="contact" emailHref="mailto:jr_savelli@hotmail.com" text="Contact"/>            
               <li>&nbsp;&nbsp;</li>
             </ul>
           </div>

@@ -23,6 +23,21 @@ var NavBarItem = React.createClass({
     return this.state.selected ? 'active' : '';
   },
 
+  getLinkHtml: function() {
+    if (this.props.url) {
+      return (
+        <Link to={this.props.url}>{this.props.text}</Link>
+      );
+    }
+    else if (this.props.emailHref) {
+      return (
+        <a href={this.props.emailHref}>{this.props.text}</a>
+      );
+    }
+
+    return '';
+  },
+
   onPageChanged: function() {
     this.setState({
       selected: MainStore.getCurrentPage() === this.props.name
@@ -31,7 +46,7 @@ var NavBarItem = React.createClass({
 
   render: function() {
     return (
-      <li className={this.getClassName()}><Link to={this.props.url}>{this.props.text}</Link></li>
+      <li className={this.getClassName()}>{ this.getLinkHtml() }</li>
     );
   }
 });

@@ -37,6 +37,10 @@ a:hover {
   text-decoration: underline;
 }
 
+.galleryImage {
+  max-height: 800px;
+}
+
 div.loading {
     position: absolute;
     right: 0;
@@ -65,7 +69,34 @@ div.fullscreenBackground {
     margin: 0px;
     z-index: -1000;
     overflow: hidden;
+}
+
+div.productsBackground {
     background: url(/client/images/ProductsBackground.jpg) no-repeat left 10% fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+div.faqBackground {
+    background: url(/client/images/FaqBackground.jpg) no-repeat left 10% fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+div.aboutUsBackground {
+    background: url(/client/images/StaticBackground.jpg) no-repeat left 10% fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+div.mediaBackground {
+    background: url(/client/images/MediaBackground.jpg) no-repeat left 10% fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -115,7 +146,7 @@ video.fullscreen {
 .video-overlay {
     position: absolute;
     text-align: center;
-    bottom: 20%;
+    bottom: 25%;
     width: 100%;
     color: white;
 }

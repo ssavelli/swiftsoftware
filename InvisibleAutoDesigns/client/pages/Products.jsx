@@ -2,7 +2,6 @@
 import React from 'react';
 import ImageBackground from '../components/ImageBackground.jsx';
 import PageHeading from '../components/PageHeading.jsx';
-import Quote from '../components/Quote.jsx';
 
 var ProductsPage = React.createClass({
   componentDidMount: function() {
@@ -14,7 +13,9 @@ var ProductsPage = React.createClass({
   render: function() {
     return (
       <div>
-        <ImageBackground imageSource="./client/images/ProductsBackground.jpg">
+        <ImageBackground
+            backgroundImageClassName="productsBackground"
+            >
             <PageHeading
               mainHeading="Products"
               />
