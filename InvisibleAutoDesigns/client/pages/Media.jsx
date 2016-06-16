@@ -15,11 +15,6 @@ var Media = React.createClass({
   render: function() {
     const images = [
       {
-        original: './client/images/StaticBackground.jpg',
-        thumbnail: './client/images/StaticBackground.jpg',
-        originalClass: 'galleryImage'
-      },
-      {
         original: './client/images/ProductsBackground.jpg',
         thumbnail: './client/images/ProductsBackground.jpg',
         originalClass: 'galleryImage'

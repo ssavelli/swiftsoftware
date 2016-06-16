@@ -26,7 +26,7 @@ var ProductsPage = React.createClass({
           <p>Invisible Auto Designs offers paint protection film from all leading brands.</p>
           <div className="smallSpacer"/>
           <div className="row">
-            <div className="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+            <div className="col-md-3">
               <div>
                 <img src="./client/images/Scotchguard.png"/>
               </div>
@@ -40,8 +40,10 @@ var ProductsPage = React.createClass({
                 <img src="./client/images/Proskin.png"/>
               </div>
             </div>
-            <div className="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-              <img src="./client/images/FilmExplodedView.png"/>
+            <div className="col-md-6">
+              <img src="./client/images/FilmExplodedView.png" className="filmExploded"/>
+            </div>
+            <div className="col-md-3">
             </div>
           </div>
           <div className="spacer"/>

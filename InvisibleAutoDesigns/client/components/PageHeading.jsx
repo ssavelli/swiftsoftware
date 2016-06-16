@@ -5,16 +5,15 @@ var PageHeading = React.createClass({
   render: function() {
     return (
       <div id="top" className="video-container">
-         <div className="video-overlay" >
-           <h1>{this.props.mainHeading}</h1>
-           <br/>
-           <br/>
-           {this._getSubHeading()}
-           <a href="#content">
-             <img src="./client/images/DownArrow.png" />
-           </a>
-         </div>
-     </div>
+        <div className="video-overlay" >
+          <h1>{this.props.mainHeading}</h1>
+          <div className="smallSpacer"/>
+          {this._getSubHeading()}
+          <a href="#content">
+            <img src="./client/images/DownArrow.png" />
+          </a>
+        </div>
+      </div>
     );
   },
   _getSubHeading: function() {
@@ -22,8 +21,7 @@ var PageHeading = React.createClass({
       return (
         <span>
           {this.props.subHeading}
-          <br/>
-          <br/>
+          <div className="smallSpacer"/>
         </span>
       );
     }

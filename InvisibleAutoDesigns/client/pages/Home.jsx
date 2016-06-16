@@ -17,7 +17,7 @@ var HomePage = React.createClass({
         <VideoBackground
           videoSource="http://advancedautomotivefilm.com/wp-content/uploads/2015/03/film-application-teaser.mp4"
           fallbackImageSource="./client/images/StaticBackground.jpg"
-          loadingPoster="./client/images/BlackPixel.gif"
+          backgroundImageClassName="homeBackground"
           >
             <PageHeading
               mainHeading="Protect Your Investment"
